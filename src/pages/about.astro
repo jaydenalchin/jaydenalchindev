@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Navbar from '../components/Navbar.astro';
 
 const pageTitle = "About Me";
 const identity = {
@@ -24,9 +25,7 @@ const goal = 3;
 		<title>{pageTitle}</title>
 	</head>
     
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/blog">Blog</a>
+	<Navbar/>
 
     <body>
         <h1>About Me</h1>

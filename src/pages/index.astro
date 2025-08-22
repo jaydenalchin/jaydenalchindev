@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Navbar from '../components/Navbar.astro';
 
 const pageTitle = "Home";
 ---
@@ -13,9 +14,7 @@ const pageTitle = "Home";
 		<title>{pageTitle}</title>
 	</head>
 
-	<a href="/">Home</a>
-    <a href="/about">About</a>
-	<a href="/blog">Blog</a>
+	<Navbar/>
 
 	<body>
 		<h1>Jayden's Astro Sandbox</h1>
