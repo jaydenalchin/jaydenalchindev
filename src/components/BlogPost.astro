@@ -1,0 +1,34 @@
+---
+const { title, description, url, color } = Astro.props;
+---
+
+<a href={url}>
+    <article>
+        <h3>{title}</h3>
+        <p>{description}</p>
+    </article>
+</a>
+
+<style define:vars={{color}}> 
+    article {
+        background-color: var(--melon);
+        padding: 0.25rem 2rem;
+        border-radius: 8px;
+        box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.25);
+        &:hover {
+            transform: scale(1.0125);
+            transition: 200ms ease-in-out;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    h3 {
+        margin-bottom: 0;
+    }
+    p {
+        margin-top: 0;
+        font-weight: 300;
+    }
+</style>
