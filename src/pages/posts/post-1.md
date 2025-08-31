@@ -7,7 +7,7 @@ author: 'Astro Learner'
 image:
     url: 'https://docs.astro.build/assets/rose.webp'
     alt: 'Astro logo'
-tags: ["astro", "blogging", "learning in public"]
+tags: ["UX", "User research"]
 ---
 
 ## What I've accomplished
