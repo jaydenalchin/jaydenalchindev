@@ -5,6 +5,11 @@ const {frontmatter} = Astro.props;
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
+    <div class="tags">
+        {frontmatter.tags.map((tag: string) => (
+        <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
+        ))}
+    </div>
     <p><em>{frontmatter.description}</em></p>
     <p>Written by {frontmatter.author}</p>
     <p>Published on: {frontmatter.pubDate.toString().slice(0,10)}</p>
@@ -15,5 +20,22 @@ const {frontmatter} = Astro.props;
 <style>
     img {
         width: 100%;
+    }
+
+    a {
+    color: black;
+    }
+
+    .tags {
+    display: flex;
+    flex-wrap: wrap;
+    }
+
+    .tag {
+    margin: 0.25em;
+    border-radius: 24px;
+    padding: 0.25em 1em;
+    font-size: 0.825em;
+    background-color: var(--peach);
     }
 </style>

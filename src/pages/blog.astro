@@ -11,6 +11,7 @@ const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true })
         {allPosts.map((post: any) => 
         <BlogPost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} color="melon"/>)}
     </section>
+    <a href="/tags/">See all tags</a>
 </BaseLayout>
 
 <style>
@@ -18,5 +19,6 @@ const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true })
         display: flex;
         flex-direction: column;
         gap: 1.125rem;
+        margin-bottom: 1rem;
     }
 </style>
