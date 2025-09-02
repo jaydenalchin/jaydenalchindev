@@ -2,7 +2,7 @@
 import Navbar from '../components/Navbar.astro';
 ---
 <header>
-    <span style="font-weight:bold; color:var(--melon);">JD</span>
+    <img class="logo" src="/logo.svg"/>
     <Navbar />
 </header>
 
@@ -11,6 +11,10 @@ import Navbar from '../components/Navbar.astro';
         display: flex;
         justify-content: space-between;
         width: 100%;
-        margin-bottom: 3rem;
+        margin: 2rem auto;
+    }
+    .logo {
+        height: 2rem;
+        width: auto;
     }
 </style>
