@@ -2,7 +2,7 @@
 import Navbar from '../components/Navbar.astro';
 ---
 <header>
-    <img class="logo" src="/logo.svg"/>
+    <a href="/"><img class="logo" src="/logo.svg"/></a>
     <Navbar />
 </header>
 
@@ -16,5 +16,10 @@ import Navbar from '../components/Navbar.astro';
     .logo {
         height: 2rem;
         width: auto;
+        transition: transform 250ms ease;
+        &:hover {
+            transform: scale(1.2);
+            fill: var(--peach);
+        }
     }
 </style>
