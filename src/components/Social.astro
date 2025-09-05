@@ -1,5 +1,12 @@
 ---
-const { platform, link } = Astro.props;
+const { icon, link, color } = Astro.props;
 ---
 
-<a href={link}>{platform}</a>
+<a href={link}><i class={"ph-duotone " + icon}></i></a>
+
+<style define:vars={{color}}>
+    a {
+        color: var(--color);
+        font-size: 1.5rem;
+    }
+</style>
